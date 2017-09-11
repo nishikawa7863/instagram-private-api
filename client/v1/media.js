@@ -255,7 +255,7 @@ Media.configurePhotoStory = function (session, uploadId, width, height) {
         })
 };
 
-Media.configureVideo = function (session, uploadId, caption, durationms, delay, {
+Media.configureVideo = function (session, uploadId, caption, durationms, delay,
   audio_muted = false,
   trim_type = 0,
   source_type = 'camera',
@@ -265,7 +265,7 @@ Media.configureVideo = function (session, uploadId, caption, durationms, delay, 
   poster_frame_index = 0,
   geotag_enabled = false,
   camera_position = 'unknown'
-} = {}) {
+) {
     if(_.isEmpty(uploadId))
         throw new Error("Upload argument must be upload valid upload id");
     if(typeof(durationms)==='undefined')
