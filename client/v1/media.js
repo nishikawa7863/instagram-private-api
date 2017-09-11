@@ -256,15 +256,15 @@ Media.configurePhotoStory = function (session, uploadId, width, height) {
 };
 
 Media.configureVideo = function (session, uploadId, caption, durationms, delay,
-  audio_muted = false,
-  trim_type = 0,
-  source_type = 'camera',
-  mas_opt_in = 'NOT_PROMPTED',
-  disable_comments = false,
-  filter_type = 0,
-  poster_frame_index = 0,
-  geotag_enabled = false,
-  camera_position = 'unknown'
+  audio_muted,
+  trim_type,
+  source_type,
+  mas_opt_in,
+  disable_comments,
+  filter_type,
+  poster_frame_index,
+  geotag_enabled,
+  camera_position
 ) {
     if(_.isEmpty(uploadId))
         throw new Error("Upload argument must be upload valid upload id");
